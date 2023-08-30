@@ -1,0 +1,395 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  /* color:#000000; */
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color:#000000;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.click{
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.click:hover{
+  transform: scale(1.1);
+}
+
+.click:active{
+  transform: scale(0.8);
+}
+
+/* Nav Bar */
+
+
+.nav__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 12px 12px 12px;
+  background-color: #f5f5f5;
+}
+
+.nav__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Dancing Script',;
+}
+
+.nav__link {
+  color: black;
+  font-family: 'Dancing Script',;
+}
+
+.nav__link:hover{
+  color: rgb(123, 123, 123);
+}
+
+.menu__btn{
+  background-color: transparent;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+}
+
+.menu__backdrop{
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop{
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu__list{
+  padding: 32px 0;
+  text-decoration: none;
+}
+
+.menu__link{
+  color: white;
+  font-size: 1.5rem;
+}
+ 
+.menu__btn--close{
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  padding: 8px;
+  color: white;
+}
+
+.mail__btn{
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50px;
+  border: none;
+  background-color: #242424; 
+  color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+}
+
+.btn__link{
+  color: rgb(255, 255, 255) !important;
+}
+  
+
+/*
+
+ Header
+
+*/
+
+/* .header__container{
+  background-color: #f5f5f5;
+  background-size: cover;
+} */
+
+.header__img--wrapper{
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.header__img{ 
+  object-fit:cover;
+  object-position: 80% 86%;
+  width: 100%;
+  height: 400px;
+  padding-bottom: 0px;
+}
+
+/*
+
+Weddings
+
+*/
+
+.wedding__container {
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wedding__para {
+  padding: 32px;
+  font-size: 3rem;
+  font-family: 'Dancing Script',;
+}
+
+.wedding__img {
+  width: 80%;
+  height: 80%;
+  margin-bottom: 12px;
+  box-shadow: 8px 8px 7px lightgrey
+}
+
+/*
+
+Couples 
+
+*/
+
+.couples__container {
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.couples__para {
+  padding: 32px;
+  font-size: 3rem;
+  font-family: 'Dancing Script',;
+}
+
+.couples__img {
+  width: 80%;
+  height: 80%;
+  margin-bottom: 12px;
+  box-shadow: 8px 8px 7px lightgrey
+}
+
+/*
+
+Footer
+
+*/
+
+.footer__para {
+  background-color: #f5f5f5;
+  font-size: small;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.footer__link {
+  color: black;
+  padding-left: 12px;
+}
+
+.footer__link:hover{
+  cursor: hand;
+}
+
+/* 
+
+Media 
+
+*/
+
+@media(min-width:800px) {
+
+  /* Header */
+  .header__img--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__img--one,
+  .header__img--two {
+    width: 45%;
+    box-shadow: 8px 8px 7px lightgrey;
+  }
+  
+  /* Wedding */
+
+  .wedding__container {
+    padding-top: 5rem;
+  }
+
+  .wedding__img {
+    width: 50%;
+    box-shadow: 8px 8px 7px lightgrey;
+  }
+
+  .wedding__para {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+
+  /* Couples */
+
+  .couples__container {
+    padding-top: 5rem;
+    display: flex;
+  }
+
+  .couples__img {
+    width: 50%;
+    box-shadow: 8px 8px 7px lightgrey
+  }
+
+  .couples__para {
+    display: flex;
+    align-items: center;
+    order: 1;
+  }
+
+}
+
+@media(max-width:600px){
+  .nav__link{
+    display: none;
+  }
+
+  .header__img{
+    width: 100%;
+    height: 100%;
+  }
+
+  .mail__btn{
+    display: none;
+  }
+  
+  .btn__link{
+    display: none;
+  }
+}
+
+@media(min-width:600px){
+  .menu__btn{
+   display: none;
+  }
+  
+  .menu__backdrop{
+    display: none;
+  }
+  
+  .menu--open .menu__backdrop{
+    display: none;
+  }
+  
+  .menu__list{
+    display: none;
+  }
+  
+  .menu__link{
+    display: none;
+  }
+   
+  .menu__btn--close{
+   display: none;
+  }
+}
