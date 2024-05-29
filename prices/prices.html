@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./prices.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./prices.js"></script>
+    <script src="https://kit.fontawesome.com/dbe21d6795.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("VtEkEzmiw7x1vGiMo");
+   })();
+</script>
+    <title>Contact</title>
+</head>
+<body>
+    <section id="nav">
+        <div class="navbar">
+            <div class="nav__container">
+                <p class="nav__title"> <a class="nav__title" href="../index.html">HW Photography</a></p>
+                <div class="nav__links"></div>
+                    <a class="nav__link" href="../landing/weddings.html">Weddings</a>
+                    <a class="nav__link" href="../couples/couples.html">Couples</a>
+                    <a class="nav__link" href="../senior/senior.html">Seniors</a>
+                    <a class="nav__link" href="#">Contact</a>
+                    <button class="menu__btn" onclick="openMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                 </div>
+            </div>
+        </div>
+       
+        <div class="menu__backdrop">
+            <button class="menu__btn menu__btn--close"onclick="closeMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul>
+                <li class="menu__list">
+                    <a href="../index.html" class="menu__link">Home</a>
+                </li>
+                <li class="menu__list">
+                    <a href="../landing/weddings.html " class="menu__link">Weddings</a>
+                </li>
+                <li class="menu__list">
+                    <a href="../couples/couples.html" class="menu__link">Couples</a>
+                </li>
+                <li class="menu__list">
+                    <a href="../senior/senior.html" class="menu__link">Seniors</a>
+                </li>
+                <li class="menu__list">
+                    <a href="./contact.html" class="menu__link">Contact</a>
+                </li>
+            </ul>
+       </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="card">
+                    <div class="price__txt">Weddings</div>
+                </div>
+                <div class="card">
+                    <div class="price__txt">Weddings</div>
+                </div>
+                <div class="card">
+                    <div class="price__txt">Weddings</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
